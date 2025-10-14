@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider} from 'react-redux';//to make the redux store available to any component
+import store from './redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.warn(store)
 root.render(
+            
   <React.StrictMode>
+    <Provider store = {store} >
     <App />
+    </ Provider>
   </React.StrictMode>
 );
 
